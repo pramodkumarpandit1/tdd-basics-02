@@ -4,11 +4,22 @@ namespace ConsoleCalculator
 {
     public class Calculator
     {
-
+        private readonly Calculate calculate;
+        public Calculator()
+        {
+            calculate = new Calculate();
+        }
         public string SendKeyPress(char key)
         {
-            // Add your implementation here.
-            throw new NotImplementedException();
+            try
+            {
+                return calculate.ComputeAndValidate(key);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }

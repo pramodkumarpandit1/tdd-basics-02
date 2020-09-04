@@ -9,13 +9,7 @@ namespace ConsoleCalculator.Tests
         public CalculatorFixture()
         {
             calculator = new Calculator();
-        }
-
-        [Fact]
-        public void Test_sendkey_with_NotImplementedException()
-        {
-            Assert.Throws<NotImplementedException>(() => calculator.SendKeyPress('\0'));
-        }
+        }        
 
         [Fact]
         public void test_sendkey_return_empty()
